@@ -7,5 +7,5 @@ RSpec::Core::RakeTask.new(:spec)
 task :default => :spec
 
 Rake::ExtensionTask.new "sjpeg" do |ext|
-  ext.lib_dir = "lib/sjpeg"
+  ext.lib_dir = "lib"
 end

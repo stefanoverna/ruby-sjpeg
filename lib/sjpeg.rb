@@ -25,7 +25,7 @@ module Sjpeg
 
   module Unstable
     extend FFI::Library
-    ffi_lib File.join(File.expand_path(__dir__), 'sjpeg', 'sjpeg.' + RbConfig::CONFIG['DLEXT'])
+    ffi_lib File.join(File.expand_path(__dir__), 'sjpeg.' + RbConfig::CONFIG['DLEXT'])
 
     attach_function :SjpegCompress, %i(pointer int int float pointer), :size_t
     attach_function :SjpegFreeBuffer, %i(pointer), :void
