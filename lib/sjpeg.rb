@@ -18,7 +18,7 @@ module Sjpeg
     result = out_result.read_array_of_uint8(out_size_t)
     Unstable.SjpegFreeBuffer(out_result)
 
-    "data:image/jpg;base64," + Base64.encode64(result.pack('C*')).split("\n").join
+    "data:image/jpeg;base64," + Base64.encode64(result.pack('C*')).split("\n").join
   ensure
     in_pointer.free if in_pointer
   end
